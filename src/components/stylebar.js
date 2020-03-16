@@ -7,12 +7,11 @@ function StyleBar(props){
 			{Object.entries(props.styles).map(([key, value]) => {
 				return(
 					<div>
-						<input key={`${key}_input`} type="radio" id={key} name={key} value={value} checked={value === props.currentStyle} onChange={props.handleStylechange}/>
-						<label key={`${key}_label`} htmlFor={key}>{key}</label>
+						<input key={`${key}`} type="radio" id={key} name={key} value={value} checked={value === props.currentStyle} onChange={props.handleStylechange}/>
+						<label key={`${value}`} htmlFor={key}>{key}</label>
 					</div>
 				)
   			})}
-
 		</div>
 	)
 }	

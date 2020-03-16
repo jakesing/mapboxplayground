@@ -16,7 +16,9 @@ class App extends React.Component {
       lng: 5,
       lat: 34,
       zoom: 3,
-      style: 'streets-v11'
+      style: 'streets-v11',
+      minZoom: 2,
+      maxZoom: 9
     };
   }
 
@@ -25,7 +27,9 @@ class App extends React.Component {
       container: this.mapContainer,
       style: `mapbox://styles/mapbox/${this.state.style}`,
       center: [this.state.lng, this.state.lat],
-      zoom: this.state.zoom
+      zoom: this.state.zoom,
+      minZoom: this.state.minZoom,
+      maxZoom: this.state.maxZoom
     })
 
     map.on('move', () => {
@@ -44,15 +48,22 @@ class App extends React.Component {
   }
 
   handleZoomChange = (event) => {
-    let change = event.target.id === 'zoomin' ? 1 : -1;
-    console.log(change)
+    const changeZoom = () => {
+      let change = event.target.id === 'zoomin' ? 1 : -1;
+      this.setState(state => ({
+        zoom: Math.round(state.zoom + parseInt(change))
+      }), () => {
+        this.renderMapCorrectly();
+      })
+    }
 
-    this.setState(state => ({
-      zoom: state.zoom + parseInt(change)
-    }), () => {
-      this.renderMapCorrectly();
-    });
-    
+    if(this.state.zoom === this.state.minZoom && event.target.id==='zoomout'){
+      console.log(`Cannot Zoom out further`)
+    } else if (this.state.zoom === this.state.maxZoom && event.target.id==='zoomin'){
+      console.log(`Cannot Zoom in further`)
+    } else {
+      changeZoom();
+    }
   }
 
   handleStylechange = (event) => {
@@ -82,7 +93,7 @@ class App extends React.Component {
         <div className="barContainer">
           <div className="sidebarStyle">Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
           <StyleBar styles={styleOptions} className="styleBar" currentStyle = {this.state.style} handleStylechange={this.handleStylechange}/>
-          <ZoomButtons handleZoomChange={this.handleZoomChange}/>
+          <ZoomButtons handleZoomChange={this.handleZoomChange} currentZoom={this.state.zoom} maxZoom={this.state.maxZoom} minZoom={this.state.minZoom}/>
         </div>
         <div ref={el => this.mapContainer = el} className="mapContainer"/>
       </div>
