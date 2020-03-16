@@ -3,22 +3,25 @@ import './App.css';
 import StyleBar from './components/stylebar'
 import ZoomButtons from './components/zoombuttons'
 import mapboxgl from 'mapbox-gl';
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiamFrZXNpbmciLCJhIjoiY2s3dGNzeWdwMHlkeDNmbHV5M3htZHhsdCJ9.wHSNBWGNxPkJ8bhoX4XTmQ'; 
 
 
 
 class App extends React.Component {
-  
+  mapRef = React.createRef();
+  map;
+
 
   constructor(props) {
     super(props);
     this.state = {
-      lng: 5,
-      lat: 34,
-      zoom: 3,
+      lng: -122.4783,
+      lat: 37.8617,
+      zoom: 8,
       style: 'streets-v11',
       minZoom: 2,
-      maxZoom: 9
+      maxZoom: 12
     };
   }
 
@@ -40,7 +43,7 @@ class App extends React.Component {
       })
     })
 
-    map.setStyle(`mapbox://styles/mapbox/${this.state.style}`)
+    map.setStyle(`mapbox://styles/${this.state.style}`);
   }
 
   componentDidMount() {
@@ -76,16 +79,17 @@ class App extends React.Component {
 
   render(){
     const styleOptions = {
-      Streets: 'streets-v11',
-      Outdoors: 'outdoors-v11',
-      Light: 'light-v10',
-      Dark: 'dark-v10',
-      Satellite: 'satellite-v9',
-      SatStreets: 'satellite-streets-v11',
-      NavPreviewDay: 'navigation-preview-day-v4',
-      NavPreviewNight: 'navigation-preview-night-v4',
-      NavGuidanceDay: 'navigation-guidance-day-v4',
-      NavGuidanceNight: 'navigation-guidance-night-v4',
+      Streets: 'mapbox/streets-v11',
+      Outdoors: 'mapbox/outdoors-v11',
+      Light: 'mapbox/light-v10',
+      Dark: 'mapbox/dark-v10',
+      Satellite: 'mapbox/satellite-v9',
+      SatStreets: 'mapbox/satellite-streets-v11',
+      NavPreviewDay: 'mapbox/navigation-preview-day-v4',
+      NavPreviewNight: 'mapbox/navigation-preview-night-v4',
+      NavGuidanceDay: 'mapbox/navigation-guidance-day-v4',
+      NavGuidanceNight: 'mapbox/navigation-guidance-night-v4',
+      Jake: 'jakesing/ck7ute9na2h4k1in8xny4dtge/draft'
     }
 
     return(
