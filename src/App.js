@@ -36,7 +36,6 @@ class App extends React.Component {
       })
     })
 
-    map.addControl(new mapboxgl.NavigationControl());
     map.setStyle(`mapbox://styles/mapbox/${this.state.style}`)
   }
 
