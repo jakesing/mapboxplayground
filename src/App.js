@@ -89,7 +89,7 @@ class App extends React.Component {
       NavPreviewNight: 'mapbox/navigation-preview-night-v4',
       NavGuidanceDay: 'mapbox/navigation-guidance-day-v4',
       NavGuidanceNight: 'mapbox/navigation-guidance-night-v4',
-      Jake: 'jakesing/ck7ute9na2h4k1in8xny4dtge/draft'
+      Jake: 'jakesing/ck7uu3usi2hym1imt1ml0h71r'
     }
 
     return(
