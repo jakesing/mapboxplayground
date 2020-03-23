@@ -102,6 +102,7 @@ class App extends React.Component {
 
     return(
       <div className="container">
+        <h1>County Level 2016 Election Map</h1>
         <div className="lead">Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
         <div className="map_labels">
           <div ref={el => this.mapContainer = el} className="mapContainer"/>
