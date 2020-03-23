@@ -14,11 +14,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      lng: -122.3642,
-      lat: 47.6100,
+      lng: -96.9767,
+      lat: 39.3452,
       zoom: 11,
       style: 'mapbox/streets-v11',
-      minZoom: 10.0,
+      minZoom: 3.0,
       maxZoom: 15.5,
       map: {},
       zoomError: null
@@ -83,21 +83,27 @@ class App extends React.Component {
   }
 
   handleStylechange = (event) => {
+    let currentZoom = this.state.zoom
+    let desiredZoom = event.target.value === 'jakesing/ck7uu3usi2hym1imt1ml0h71r' ? 3 : currentZoom
+    
+    this.state.map.setStyle(`mapbox://styles/${event.target.value}`)
+    this.state.map.setZoom(desiredZoom)
+    
     this.setState({
-        style: event.target.value
+        style: event.target.value,
+        zoom: desiredZoom
       })
 
-    this.state.map.setStyle(`mapbox://styles/${event.target.value}`)
   }
 
   render(){
     const styleOptions = {
       Streets: 'mapbox/streets-v11',
-      Outdoors: 'mapbox/outdoors-v11',
       Light: 'mapbox/light-v10',
+      Outdoors: 'mapbox/outdoors-v11',
       Dark: 'mapbox/dark-v10',
       Satellite: 'mapbox/satellite-v9',
-      JakeCustom: 'jakesing/ck7uu3usi2hym1imt1ml0h71r'
+      ElectionData: 'jakesing/ck7uu3usi2hym1imt1ml0h71r'
     }
 
     return(
