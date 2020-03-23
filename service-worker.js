@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mapboxplayground/precache-manifest.0b33f57e92086222268126d0337f61fa.js"
+  "/mapboxplayground/precache-manifest.16f30a3526b43cc08ff808d9686ee2d8.js"
 );
 
 self.addEventListener('message', (event) => {
