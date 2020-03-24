@@ -17,7 +17,7 @@ class App extends React.Component {
       lng: -96.9767,
       lat: 39.3452,
       zoom: 11,
-      style: 'mapbox/streets-v11',
+      style: 'jakesing/ck7uu3usi2hym1imt1ml0h71r',
       minZoom: 3.0,
       maxZoom: 15.5,
       map: {},
@@ -98,12 +98,12 @@ class App extends React.Component {
 
   render(){
     const styleOptions = {
+      ElectionData: 'jakesing/ck7uu3usi2hym1imt1ml0h71r',
       Streets: 'mapbox/streets-v11',
       Light: 'mapbox/light-v10',
       Outdoors: 'mapbox/outdoors-v11',
       Dark: 'mapbox/dark-v10',
       Satellite: 'mapbox/satellite-v9',
-      ElectionData: 'jakesing/ck7uu3usi2hym1imt1ml0h71r'
     }
 
     return(
