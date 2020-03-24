@@ -16,7 +16,7 @@ class App extends React.Component {
     this.state = {
       lng: -96.9767,
       lat: 39.3452,
-      zoom: 11,
+      zoom: 3.0,
       style: 'jakesing/ck7uu3usi2hym1imt1ml0h71r',
       minZoom: 3.0,
       maxZoom: 15.5,
