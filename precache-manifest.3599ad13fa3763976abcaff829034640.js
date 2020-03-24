@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ed69d4d6c6ec165a41be948242ce1746",
+    "revision": "a8dfc97432199857bd09af0249abacb9",
     "url": "/mapboxplayground/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mapboxplayground/static/css/2.89f067aa.chunk.css"
   },
   {
-    "revision": "4c64a4fa5e6f5181daef",
+    "revision": "adf72d7db3ba25fce9f8",
     "url": "/mapboxplayground/static/css/main.5724a75a.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mapboxplayground/static/js/2.d9d8d5cf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4c64a4fa5e6f5181daef",
-    "url": "/mapboxplayground/static/js/main.6e49c5e5.chunk.js"
+    "revision": "adf72d7db3ba25fce9f8",
+    "url": "/mapboxplayground/static/js/main.c6f9ebac.chunk.js"
   },
   {
     "revision": "c475555ef311670756cc",

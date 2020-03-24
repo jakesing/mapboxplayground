@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mapboxplayground/static/css/main.5724a75a.chunk.css",
-    "main.js": "/mapboxplayground/static/js/main.6e49c5e5.chunk.js",
-    "main.js.map": "/mapboxplayground/static/js/main.6e49c5e5.chunk.js.map",
+    "main.js": "/mapboxplayground/static/js/main.c6f9ebac.chunk.js",
+    "main.js.map": "/mapboxplayground/static/js/main.c6f9ebac.chunk.js.map",
     "runtime-main.js": "/mapboxplayground/static/js/runtime-main.7e7c4baa.js",
     "runtime-main.js.map": "/mapboxplayground/static/js/runtime-main.7e7c4baa.js.map",
     "static/css/2.89f067aa.chunk.css": "/mapboxplayground/static/css/2.89f067aa.chunk.css",
     "static/js/2.d9d8d5cf.chunk.js": "/mapboxplayground/static/js/2.d9d8d5cf.chunk.js",
     "static/js/2.d9d8d5cf.chunk.js.map": "/mapboxplayground/static/js/2.d9d8d5cf.chunk.js.map",
     "index.html": "/mapboxplayground/index.html",
-    "precache-manifest.086b8edc1715f9c61adf426b353ba191.js": "/mapboxplayground/precache-manifest.086b8edc1715f9c61adf426b353ba191.js",
+    "precache-manifest.3599ad13fa3763976abcaff829034640.js": "/mapboxplayground/precache-manifest.3599ad13fa3763976abcaff829034640.js",
     "service-worker.js": "/mapboxplayground/service-worker.js",
     "static/css/2.89f067aa.chunk.css.map": "/mapboxplayground/static/css/2.89f067aa.chunk.css.map",
     "static/css/main.5724a75a.chunk.css.map": "/mapboxplayground/static/css/main.5724a75a.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.89f067aa.chunk.css",
     "static/js/2.d9d8d5cf.chunk.js",
     "static/css/main.5724a75a.chunk.css",
-    "static/js/main.6e49c5e5.chunk.js"
+    "static/js/main.c6f9ebac.chunk.js"
   ]
 }
